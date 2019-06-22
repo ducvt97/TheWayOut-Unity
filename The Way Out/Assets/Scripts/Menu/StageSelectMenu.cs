@@ -41,7 +41,7 @@ public class StageSelectMenu : MonoBehaviour
 
     public void ProgressDataLoad()
     {
-        int curLevel = menu.savedData.playerData.Level + 1;
+        int curLevel = menu.savedData._savedData.Level + 1;
         for (int i = 0; i < curLevel; i++)
         {
             stageList[i].gameObject.transform.Find("Lock").gameObject.SetActive(false);

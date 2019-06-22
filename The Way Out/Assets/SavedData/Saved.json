@@ -1,0 +1,11 @@
+{
+	"isNew" : true,
+	"level" : 0,
+	"life" : 1,
+	"diamond" : 0,
+	"speedUp" : false,
+	"flash" : false,
+	"graphics" : 2,
+	"music" : -7,
+	"sfx" : -5
+}

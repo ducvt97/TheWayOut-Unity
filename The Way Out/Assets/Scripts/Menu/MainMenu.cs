@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         menu = GameObject.FindGameObjectWithTag("GameController").GetComponent<Menu>();
-        if(menu.savedData.playerData.IsNew)
+        if(menu.savedData._savedData.isNew)
             transform.GetChild(0).transform.gameObject.SetActive(false);
     }
 

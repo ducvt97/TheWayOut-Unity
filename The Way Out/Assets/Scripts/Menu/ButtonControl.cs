@@ -23,18 +23,26 @@ public class ButtonControl : MonoBehaviour
     public void MenuItem()
     {
         PlaySound();
+        TurnToNormalState();
         var mainMenu = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<MainMenu>();
         if (mainMenu != null)
         {
             mainMenu.MenuItemEvent(message);
         }
-        TurnToNormalState();
+        
+    }
+
+    public void BuyItem()
+    {
+        var shop = GameObject.FindGameObjectWithTag("ShopMenu").GetComponent<ShopMenu>();
+        if (shop != null)
+            shop.BuyItem(message);
     }
     
     public void Back()
     {
         PlaySound();
-        transform.parent.gameObject.SetActive(false);
+        TurnToNormalState();
         int length = objectListToBeActive.Length;
         if (length > 0)
         {
@@ -43,6 +51,7 @@ public class ButtonControl : MonoBehaviour
                 objectListToBeActive[i].SetActive(true);
             }
         }
+        transform.parent.gameObject.SetActive(false);
     }
 
     public void QuitGame()
@@ -87,6 +96,13 @@ public class ButtonControl : MonoBehaviour
         var stageSelectMenu = GameObject.FindGameObjectWithTag("StageSelectMenu").GetComponent<StageSelectMenu>();
         if (stageSelectMenu != null)
             stageSelectMenu.StageLoad();
+    }
+
+    public void GoShopping()
+    {
+        PlaySound();
+        if (objectListToBeActive.Length != 0)
+            objectListToBeActive[0].SetActive(true);
     }
 
     private void PlaySound()
