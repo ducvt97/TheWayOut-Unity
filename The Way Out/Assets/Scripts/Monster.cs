@@ -12,6 +12,8 @@ public class Monster : MonoBehaviour
     public Transform eyes;
     public AudioSource growl;
     public GameObject deathCam;
+    public GameObject mainCam;
+    public GameObject winPanel;
     public Transform camPos;
 
     private NavMeshAgent nav;
@@ -140,20 +142,20 @@ public class Monster : MonoBehaviour
                         state = "kill";
                         player.GetComponent<Player>().alive = false;
                         player.GetComponent<ThirdPersonUserControl>().enabled = false;
-                        //deathCam.SetActive(true);
+                        deathCam.SetActive(true);
                         deathCam.transform.position = Camera.main.transform.position;
                         deathCam.transform.rotation = Camera.main.transform.rotation;
+                        mainCam.SetActive(false);
                         //Camera.main.gameObject.SetActive(false);
                         growl.pitch = 0.7f;
                         growl.Play();
-                        //Invoke("reset", 1f);
-                        reset();
+                        Invoke("reset", 1f);
                     }
 
 
                 }
             }
-
+            
             //Hunt//
             if (state == "hunt")
             {
@@ -187,7 +189,8 @@ public class Monster : MonoBehaviour
         player.GetComponent<Player>().alive = true;
         player.GetComponent<ThirdPersonUserControl>().enabled = true;
         //Camera.main.gameObject.SetActive(true); 
-        //deathCam.SetActive(false);
+        mainCam.SetActive(true);
+        deathCam.SetActive(false);
         player.GetComponent<Player>().ourHealth -= 1;
         player.GetComponent<Player>().transform.position = player.GetComponent<Player>().getStartPosPlayer();
         player.GetComponent<Player>().transform.rotation = player.GetComponent<Player>().getStartRotPlayer();
@@ -204,5 +207,17 @@ public class Monster : MonoBehaviour
         anim.speed = 1f;
         alive = false;
         nav.Stop();
+        winPanel.SetActive(true);
+    }
+
+    public void speedZero()
+    {
+        nav.Stop();
+    }
+
+    public void speedNormal()
+    {
+        nav.speed = 1.2F;
+        anim.speed = 1.2F;
     }
 }

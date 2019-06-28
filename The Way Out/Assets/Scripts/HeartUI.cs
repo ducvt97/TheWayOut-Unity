@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class HeartUI : MonoBehaviour
 {
     public Sprite[] Heartsprite;
-
     public Player player;
-
     public Image Heart;
+    public GameObject deadPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,11 @@ public class HeartUI : MonoBehaviour
 
         if (player.ourHealth < 0)
             player.ourHealth = 0;
+
+        if (player.ourHealth == 0)
+            deadPanel.SetActive(true);
+        else
+            deadPanel.SetActive(false);
 
         Heart.sprite = Heartsprite[player.ourHealth];
     }

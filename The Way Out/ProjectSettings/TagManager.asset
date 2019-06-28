@@ -12,6 +12,8 @@ TagManager:
   - Map
   - Monster
   - Ball
+  - BallRed
+  - BallYellow
   layers:
   - Default
   - TransparentFX
