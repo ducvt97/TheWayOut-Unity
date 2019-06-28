@@ -8,6 +8,10 @@ TagManager:
   - MainMenu
   - ScrollField
   - StageSelectMenu
+  - Wall
+  - Map
+  - Monster
+  - Ball
   layers:
   - Default
   - TransparentFX
