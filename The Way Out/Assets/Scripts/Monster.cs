@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
+    public static Monster instance;
     public GameObject player;
     public AudioClip[] footsounds;
     public Transform eyes;
@@ -25,6 +26,11 @@ public class Monster : MonoBehaviour
     private bool highAlert = false;
     private float alertness = 20f;
     private Vector3 startPosMonster;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -212,12 +218,16 @@ public class Monster : MonoBehaviour
 
     public void speedZero()
     {
-        nav.Stop();
+        anim.speed = 1f;
+        nav.speed = 1f;
+        alive = false;
+        //nav.Stop();
     }
 
     public void speedNormal()
     {
-        nav.speed = 1.2F;
-        anim.speed = 1.2F;
+        anim.speed = 1.2f;
+        nav.speed = 1.2f;
+        alive = true;
     }
 }

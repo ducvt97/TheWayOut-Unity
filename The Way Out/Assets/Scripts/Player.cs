@@ -41,15 +41,15 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
             IconMinimapMonster.SetActive(true);
-            Invoke("hideInconMinimapMonster", 30f);
+            Invoke("hideInconMinimapMonster", 60f);
         }
         else if (other.CompareTag("BallYellow"))
         {
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
             //pauseMonster();
-            other.transform.parent.GetComponent<Monster>().speedZero();
-            //Invoke("continueMonster", 15f);
+            Monster.instance.speedZero();
+            Invoke("activeMonster", 30f);
         }
     }
 
@@ -58,21 +58,10 @@ public class Player : MonoBehaviour
         IconMinimapMonster.SetActive(false);
     }
 
-    //void pauseMonster()
-    //{
-    //    NavMeshAgent nav = monster.GetComponent<Monster>().getNav();
-    //    Animator anim = monster.GetComponent<Monster>().getAnim();
-    //    nav.speed = 0f;
-    //    anim.speed = 0f;
-    //}
-
-    //void continueMonster()
-    //{
-    //    NavMeshAgent nav = monster.GetComponent<Monster>().getNav();
-    //    Animator anim = monster.GetComponent<Monster>().getAnim();
-    //    nav.speed = 1.2f;
-    //    anim.speed = 1.2f;
-    //}
+    void activeMonster()
+    {
+        Monster.instance.speedNormal();
+    }
 
     public void bleed()
     {
