@@ -46,7 +46,7 @@ public class Monster : MonoBehaviour
             RaycastHit rayHit;
             if (Physics.Linecast(eyes.position, player.transform.position, out rayHit))
             {
-                print("hit " + rayHit.collider.gameObject.name);
+                //print("hit " + rayHit.collider.gameObject.name);
                 if (rayHit.collider.gameObject.name == "eyes")
                 {
                     if (state != "kill")
