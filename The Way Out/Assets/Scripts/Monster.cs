@@ -22,6 +22,7 @@ public class Monster : MonoBehaviour
     private float wait = 0f;
     private bool highAlert = false;
     private float alertness = 20f;
+    private Vector3 startPosMonster;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class Monster : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.speed = 1.2f;
         nav.speed = 1.2f;
+        startPosMonster = transform.position;
     }
 
     public void footstep(int _num)
@@ -69,7 +71,6 @@ public class Monster : MonoBehaviour
         if (alive)
         {
             anim.SetFloat("velocity", nav.velocity.magnitude);
-
             //Idle//
             if (state == "idle") {
                 Vector3 randomPos = Random.insideUnitSphere * alertness;
@@ -139,13 +140,14 @@ public class Monster : MonoBehaviour
                         state = "kill";
                         player.GetComponent<Player>().alive = false;
                         player.GetComponent<ThirdPersonUserControl>().enabled = false;
-                        deathCam.SetActive(true);
+                        //deathCam.SetActive(true);
                         deathCam.transform.position = Camera.main.transform.position;
                         deathCam.transform.rotation = Camera.main.transform.rotation;
-                        Camera.main.gameObject.SetActive(false);
+                        //Camera.main.gameObject.SetActive(false);
                         growl.pitch = 0.7f;
                         growl.Play();
-                        Invoke("reset", 1f);
+                        //Invoke("reset", 1f);
+                        reset();
                     }
 
 
@@ -181,7 +183,18 @@ public class Monster : MonoBehaviour
     //reset//
     void reset()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        player.GetComponent<Player>().alive = true;
+        player.GetComponent<ThirdPersonUserControl>().enabled = true;
+        //Camera.main.gameObject.SetActive(true); 
+        //deathCam.SetActive(false);
+        player.GetComponent<Player>().ourHealth -= 1;
+        player.GetComponent<Player>().transform.position = player.GetComponent<Player>().getStartPosPlayer();
+        player.GetComponent<Player>().transform.rotation = player.GetComponent<Player>().getStartRotPlayer();
+        transform.position = startPosMonster;
+        anim.speed = 1.2f;
+        nav.speed = 1.2f;
+        state = "idle";
     }
 
     //die//
