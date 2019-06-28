@@ -52,8 +52,8 @@ public class Monster : MonoBehaviour
                     if (state != "kill")
                     {
                         state = "chase";
-                        nav.speed = 2f;
-                        anim.speed = 2f;
+                        nav.speed = 1.4f;
+                        anim.speed = 1.4f;
                         growl.pitch = 1.2f;
                         growl.Play();
                     }
