@@ -11,8 +11,12 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         menu = GameObject.FindGameObjectWithTag("GameController").GetComponent<Menu>();
-        if(menu.savedData._savedData.isNew)
+        if (menu.savedData._savedData.isNew)
+        {
+            Debug.Log("resume");
             transform.GetChild(0).transform.gameObject.SetActive(false);
+        }
+            
     }
 
     // Update is called once per frame

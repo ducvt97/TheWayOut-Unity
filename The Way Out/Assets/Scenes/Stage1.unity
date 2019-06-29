@@ -35433,7 +35433,6 @@ MonoBehaviour:
   ourHealth: 0
   maxhealth: 2
   IconMinimapMonster: {fileID: 1232837246}
-  monster: {fileID: 1717191339}
 --- !u!65 &1451523942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36065,7 +36064,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -49770,6 +49769,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster2
       objectReference: {fileID: 0}
+    - target: {fileID: 5276816783928332902, guid: e066f9b4d38aec24490b75e8b03ad92c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276816783928332902, guid: e066f9b4d38aec24490b75e8b03ad92c,
+        type: 3}
+      propertyPath: m_Name
+      value: IconMinimapMonster
+      objectReference: {fileID: 0}
     - target: {fileID: 5276816784210160926, guid: e066f9b4d38aec24490b75e8b03ad92c,
         type: 3}
       propertyPath: player
@@ -49850,16 +49859,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5276816783928332902, guid: e066f9b4d38aec24490b75e8b03ad92c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276816783928332902, guid: e066f9b4d38aec24490b75e8b03ad92c,
-        type: 3}
-      propertyPath: m_Name
-      value: IconMinimapMonster
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e066f9b4d38aec24490b75e8b03ad92c, type: 3}
 --- !u!1001 &6204476002341530266
@@ -49878,6 +49877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204476003063255025, guid: d28501b41cd4b3c4e9c84821b13bfb1b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6204476003792756800, guid: d28501b41cd4b3c4e9c84821b13bfb1b,
         type: 3}
@@ -49938,11 +49942,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6204476003063255025, guid: d28501b41cd4b3c4e9c84821b13bfb1b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6204476003063255031, guid: d28501b41cd4b3c4e9c84821b13bfb1b,
         type: 3}
