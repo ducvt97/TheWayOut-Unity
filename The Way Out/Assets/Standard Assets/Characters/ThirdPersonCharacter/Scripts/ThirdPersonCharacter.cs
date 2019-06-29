@@ -7,7 +7,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	[RequireComponent(typeof(Animator))]
 	public class ThirdPersonCharacter : MonoBehaviour
 	{
-		[SerializeField] float m_MovingTurnSpeed = 360;
+        public static ThirdPersonCharacter instance;
+        [SerializeField] float m_MovingTurnSpeed = 360;
 		[SerializeField] float m_StationaryTurnSpeed = 180;
 		[SerializeField] float m_JumpPower = 12f;
 		[Range(1f, 4f)][SerializeField] float m_GravityMultiplier = 2f;
@@ -29,8 +30,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+        void Awake()
+        {
+            instance = this;
+        }
 
-		void Start()
+        void Start()
 		{
 			m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
@@ -198,6 +203,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+        public void SetSpeed(float moveSpeed)
+        {
+            this.m_MoveSpeedMultiplier = moveSpeed;
+        }
 
 		void CheckGroundStatus()
 		{
