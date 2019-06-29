@@ -45,11 +45,11 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("BallYellow"))
         {
+            Monster.instance.speedZero();
+            Invoke("activeMonster", 30f);
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
             //pauseMonster();
-            Monster.instance.speedZero();
-            Invoke("activeMonster", 30f);
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class gamePlayCanvas : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class gamePlayCanvas : MonoBehaviour
     public Text txtBalls;
     public string ballsString;
     public int ballsTotal = 4;
+
     private int ballsFound = 0;
 
     void Awake()
