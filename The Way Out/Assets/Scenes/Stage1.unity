@@ -49866,6 +49866,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5276816784210160923, guid: e066f9b4d38aec24490b75e8b03ad92c,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276816784210160923, guid: e066f9b4d38aec24490b75e8b03ad92c,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276816784210160924, guid: e066f9b4d38aec24490b75e8b03ad92c,
+        type: 3}
+      propertyPath: m_Speed
+      value: 1.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e066f9b4d38aec24490b75e8b03ad92c, type: 3}
 --- !u!1001 &5527868482148905530
@@ -50103,6 +50118,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 309
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204476003798241684, guid: d28501b41cd4b3c4e9c84821b13bfb1b,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204476003798241684, guid: d28501b41cd4b3c4e9c84821b13bfb1b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d28501b41cd4b3c4e9c84821b13bfb1b, type: 3}

@@ -218,10 +218,10 @@ public class Monster : MonoBehaviour
 
     public void speedZero()
     {
-        anim.speed = 1f;
-        nav.speed = 1f;
+        anim.speed = 0f;
+        nav.speed = 0f;
         alive = false;
-        //nav.Stop();
+        nav.Stop();
     }
 
     public void speedNormal()
@@ -229,5 +229,6 @@ public class Monster : MonoBehaviour
         anim.speed = 1.2f;
         nav.speed = 1.2f;
         alive = true;
+        nav.Resume();
     }
 }
