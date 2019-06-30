@@ -16,6 +16,7 @@ public class Monster : MonoBehaviour
     public GameObject mainCam;
     public GameObject winPanel;
     public Transform camPos;
+    public float speedHunt = 1.5f;
 
     private NavMeshAgent nav;
     private AudioSource sound;
@@ -62,8 +63,8 @@ public class Monster : MonoBehaviour
                     if (state != "kill")
                     {
                         state = "chase";
-                        nav.speed = 1.4f;
-                        anim.speed = 1.4f;
+                        nav.speed = speedHunt;
+                        anim.speed = speedHunt;
                         growl.pitch = 1.2f;
                         growl.Play();
                     }
