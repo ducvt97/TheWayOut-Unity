@@ -15,7 +15,6 @@ public class MusicSetting : MonoBehaviour
         slider = this.GetComponent<Slider>();
         var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
         slider.value = save.savedData._savedData.music;
-        audioMixer.SetFloat("Music", slider.value);
     }
 
     // Update is called once per frame
@@ -26,6 +25,9 @@ public class MusicSetting : MonoBehaviour
 
     public void OnValueChange()
     {
-        audioMixer.SetFloat("Music", slider.value); 
+        audioMixer.SetFloat("Music", slider.value);
+        var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+        save.savedData._savedData.music = slider.value;
+        save.savedData.OverwriteDataFile();
     }
 }

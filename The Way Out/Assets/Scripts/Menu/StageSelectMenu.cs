@@ -35,8 +35,7 @@ public class StageSelectMenu : MonoBehaviour
 
     public void StageLoad()
     {
-        Debug.Log(stageSelect);
-        //SceneManager.LoadScene("Stage" + stageSelect.ToString());
+        SceneManager.LoadScene("Stage" + stageSelect.ToString());
     }
 
     public void ProgressDataLoad()

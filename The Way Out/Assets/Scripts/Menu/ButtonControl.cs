@@ -12,9 +12,9 @@ public class ButtonControl : MonoBehaviour
 
     public void WinStage()
     {
-        var balls = GameObject.FindGameObjectWithTag("GameController").GetComponent<gamePlayCanvas>().txtBalls.text;
+        var balls = GameObject.FindGameObjectWithTag("GameController").GetComponent<gamePlayCanvas>().ballsTotal;
         var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
-        save.savedData._savedData.diamond += int.Parse(balls);
+        save.savedData._savedData.diamond += balls;
         save.savedData._savedData.level += 1;
         save.savedData.OverwriteDataFile();
         SceneManager.LoadScene("StageSelect");

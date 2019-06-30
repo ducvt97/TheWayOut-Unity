@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Save : MonoBehaviour
 {
     public SavedData savedData;
+    public AudioMixer audioMixer;
 
     void Awake()
     {
@@ -15,7 +17,8 @@ public class Save : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //savedData = new SavedData();
+        audioMixer.SetFloat("Music", savedData._savedData.music);
+        audioMixer.SetFloat("SFX", savedData._savedData.sfx);
     }
     
 }

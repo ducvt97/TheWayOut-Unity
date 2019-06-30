@@ -1,12 +1,1 @@
-{
-	"something" : "",
-	"isNew" : false,
-	"level" : 4,
-	"life" : 2,
-	"diamond" : 0,
-	"speedUp" : true,
-	"flash" : false,
-	"graphics" : 2,
-	"music" : -7,
-	"sfx" : -5
-}
+{"something":"","isNew":true,"level":0,"life":2,"diamond":0,"speedUp":false,"flash":false,"graphics":2,"music":-7.0,"sfx":-5.0}

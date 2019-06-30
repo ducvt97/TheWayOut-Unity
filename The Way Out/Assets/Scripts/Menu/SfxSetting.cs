@@ -15,12 +15,17 @@ public class SfxSetting : MonoBehaviour
         slider = this.GetComponent<Slider>();
         var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
         slider.value = save.savedData._savedData.sfx;
-        audioMixer.SetFloat("SFX", slider.value);
     }
 
     public void OnValueChange()
     {
         if (slider != null)
+        {
             audioMixer.SetFloat("SFX", slider.value);
+            var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+            save.savedData._savedData.sfx = slider.value;
+            save.savedData.OverwriteDataFile();
+        }
+            
     }
 }
