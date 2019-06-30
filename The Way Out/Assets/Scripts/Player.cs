@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     public bool alive = true;
     public int ourHealth;
     public int maxhealth = 2;
-    public GameObject IconMinimapMonster;
+    public GameObject[] IconMinimapMonster;
+    public Monster[] monsters;
     public AudioSource touchBall;
 
     private Vector3 startPos;
@@ -43,13 +44,20 @@ public class Player : MonoBehaviour
             touchBall.Play();
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
-            IconMinimapMonster.SetActive(true);
+            for (int n = 0; n < IconMinimapMonster.GetLength(0); n++)
+            {
+                IconMinimapMonster[n].SetActive(true);
+            }
             Invoke("hideInconMinimapMonster", 60f);
         }
         else if (other.CompareTag("BallYellow"))
         {
             touchBall.Play();
-            Monster.instance.speedZero();
+            for (int n = 0; n < monsters.GetLength(0); n++)
+            {
+                monsters[n].speedZero();
+            }
+            //Monster.instance.speedZero();
             Invoke("activeMonster", 30f);
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
@@ -59,12 +67,19 @@ public class Player : MonoBehaviour
 
     void hideInconMinimapMonster()
     {
-        IconMinimapMonster.SetActive(false);
+        for (int n = 0; n < IconMinimapMonster.GetLength(0); n++)
+        {
+            IconMinimapMonster[n].SetActive(false);
+        }
     }
 
     void activeMonster()
     {
-        Monster.instance.speedNormal();
+        for (int n = 0; n < monsters.GetLength(0); n++)
+        {
+            monsters[n].speedNormal();
+        }
+        //Monster.instance.speedNormal();
     }
 
     public void bleed()
