@@ -19,8 +19,8 @@ public class HeartUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.ourHealth > 2)
-            player.ourHealth = 2;
+        if (player.ourHealth > 4)
+            player.ourHealth = 4;
 
 
         if (player.ourHealth < 0)

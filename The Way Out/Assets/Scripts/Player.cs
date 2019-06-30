@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public bool alive = true;
     public int ourHealth;
-    public int maxhealth = 2;
+    public int maxhealth = 4;
     public GameObject[] IconMinimapMonster;
     public Monster[] monsters;
     public AudioSource touchBall;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private Quaternion startRotation;
     void Start()
     {
-        ourHealth = maxhealth;
+        //ourHealth = maxhealth;
         startPos = transform.position;
         startRotation = transform.rotation;
     }

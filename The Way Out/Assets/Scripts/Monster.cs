@@ -77,7 +77,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawLine(eyes.position, player.transform.position, Color.green);
+        //Debug.DrawLine(eyes.position, player.transform.position, Color.green);
         if (alive)
         {
             anim.SetFloat("velocity", nav.velocity.magnitude);
