@@ -1,12 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Xml;
 using UnityEngine;
-using UnityEngine.UI;
 
-
-public class Menu : MonoBehaviour
+public class Save : MonoBehaviour
 {
     public SavedData savedData;
 
@@ -20,12 +16,6 @@ public class Menu : MonoBehaviour
     void Start()
     {
         //savedData = new SavedData();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     
 }

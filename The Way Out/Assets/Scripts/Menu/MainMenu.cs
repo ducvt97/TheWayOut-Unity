@@ -1,22 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject settingMenu, stageSelectMenu, moreInfo, logo, newGamePopup, quitPopup;
-    private Menu menu;
+    public GameObject settingMenu, moreInfo, newGamePopup, quitPopup;
+    private Save save;
 
     // Start is called before the first frame update
     void Start()
     {
-        menu = GameObject.FindGameObjectWithTag("GameController").GetComponent<Menu>();
-        if (menu.savedData._savedData.isNew)
-        {
-            Debug.Log("resume");
+        save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+        if (save.savedData._savedData.isNew)
             transform.GetChild(0).transform.gameObject.SetActive(false);
-        }
-            
     }
 
     // Update is called once per frame
@@ -30,17 +27,19 @@ public class MainMenu : MonoBehaviour
         switch (message)
         {
             case 0:
-                newGamePopup.SetActive(false);
-                if (stageSelectMenu != null)
-                    stageSelectMenu.SetActive(true);
-                logo.SetActive(false);
-                transform.GetChild(4).gameObject.SetActive(false);
+                SceneManager.LoadScene("StageSelect");
                 break;
             case 1:
-                newGamePopup.SetActive(true);
+                if(!save.savedData._savedData.isNew)
+                    newGamePopup.SetActive(true);
+                else
+                {
+                    save.savedData._savedData.isNew = false;
+                    save.savedData.OverwriteDataFile();
+                    SceneManager.LoadScene("StageSelect");
+                }
                 break;
             case 2:
-                //var setting = GameObject.FindGameObjectWithTag("SettingMenu");
                 if (settingMenu != null)
                     settingMenu.SetActive(true);
                 break;

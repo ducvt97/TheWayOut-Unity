@@ -8,13 +8,13 @@ public class StageSelectMenu : MonoBehaviour
 {
     public Button[] stageList;
     public Button buttonPlay;
-    private Menu menu;
+    private Save save;
     public int stageSelect = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        menu = GameObject.FindGameObjectWithTag("GameController").GetComponent<Menu>();
+        save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
         ProgressDataLoad();
     }
 
@@ -41,7 +41,7 @@ public class StageSelectMenu : MonoBehaviour
 
     public void ProgressDataLoad()
     {
-        int curLevel = menu.savedData._savedData.Level + 1;
+        int curLevel = save.savedData._savedData.level + 1;
         for (int i = 0; i < curLevel; i++)
         {
             stageList[i].gameObject.transform.Find("Lock").gameObject.SetActive(false);

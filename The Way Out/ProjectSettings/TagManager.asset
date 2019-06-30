@@ -14,6 +14,7 @@ TagManager:
   - Ball
   - BallRed
   - BallYellow
+  - SavedData
   layers:
   - Default
   - TransparentFX
