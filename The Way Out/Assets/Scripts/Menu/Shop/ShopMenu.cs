@@ -39,7 +39,7 @@ public class ShopMenu : MonoBehaviour
                 }
                 break;
             case 1:
-                if (save.savedData._savedData.diamond < 300)
+                if (save.savedData._savedData.diamond < 400)
                     failedPopup.SetActive(true);
                 else
                 {

@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
 {
     public bool alive = true;
     public int ourHealth;
-    public int maxhealth = 4;
+    //public int maxhealth = 3;
     public GameObject[] IconMinimapMonster;
     public Monster[] monsters;
     public AudioSource touchBall;
+    public GameObject Heart1;
+    public GameObject Heart2;
 
     private Vector3 startPos;
     private Quaternion startRotation;
@@ -19,6 +21,12 @@ public class Player : MonoBehaviour
         //ourHealth = maxhealth;
         startPos = transform.position;
         startRotation = transform.rotation;
+        var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+        ourHealth = save.savedData._savedData.life;
+        if (ourHealth == 2)
+            Heart1.SetActive(true);
+        else if(ourHealth == 3)
+            Heart2.SetActive(true);
     }
 
     void Update()
