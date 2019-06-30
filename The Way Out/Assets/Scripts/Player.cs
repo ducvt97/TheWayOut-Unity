@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int ourHealth;
     public int maxhealth = 2;
     public GameObject IconMinimapMonster;
+    public AudioSource touchBall;
 
     private Vector3 startPos;
     private Quaternion startRotation;
@@ -33,11 +34,13 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Ball"))
         {
+            touchBall.Play();
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
         }
         else if (other.CompareTag("BallRed"))
         {
+            touchBall.Play();
             Destroy(other.gameObject);
             gamePlayCanvas.instance.findBall();
             IconMinimapMonster.SetActive(true);
@@ -45,6 +48,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("BallYellow"))
         {
+            touchBall.Play();
             Monster.instance.speedZero();
             Invoke("activeMonster", 30f);
             Destroy(other.gameObject);
