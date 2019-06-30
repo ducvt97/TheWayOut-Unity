@@ -1,23 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonControl : MonoBehaviour
 {
     public GameObject[] objectListToBeActive;
     public int message;
+    public string sceneName;
 
-    // Start is called before the first frame update
-    void Start()
+    public void LoadScene()
     {
-        
+        SceneManager.LoadScene(sceneName);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NewGame()
     {
-        
+        var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+        save.savedData.ResetProgress();
+        LoadScene();
     }
 
     public void MenuItem()
@@ -34,6 +36,7 @@ public class ButtonControl : MonoBehaviour
 
     public void BuyItem()
     {
+        PlaySound();
         var shop = GameObject.FindGameObjectWithTag("ShopMenu").GetComponent<ShopMenu>();
         if (shop != null)
             shop.BuyItem(message);
@@ -98,17 +101,28 @@ public class ButtonControl : MonoBehaviour
             stageSelectMenu.StageLoad();
     }
 
-    public void GoShopping()
+    public void ContinuePlay()
     {
-        PlaySound();
-        if (objectListToBeActive.Length != 0)
-            objectListToBeActive[0].SetActive(true);
+        Time.timeScale = 1f;
+        Back();
+    }
+
+    public void ActiveObject()
+    {
+        int length = objectListToBeActive.Length;
+        if (length > 0)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                objectListToBeActive[i].SetActive(true);
+            }
+        }
     }
 
     private void PlaySound()
     {
         var sound = this.GetComponent<AudioSource>();
-        if (sound != null)
+        if (sound != null && sound.clip != null)
             sound.Play();
     }
 

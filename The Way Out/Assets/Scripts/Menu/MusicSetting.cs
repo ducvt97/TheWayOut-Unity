@@ -13,8 +13,8 @@ public class MusicSetting : MonoBehaviour
     void Start()
     {
         slider = this.GetComponent<Slider>();
-        var menu = GameObject.FindGameObjectWithTag("GameController").GetComponent<Menu>();
-        slider.value = menu.savedData._savedData.music;
+        var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+        slider.value = save.savedData._savedData.music;
         audioMixer.SetFloat("Music", slider.value);
     }
 

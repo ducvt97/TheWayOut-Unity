@@ -1,7 +1,8 @@
 {
-	"isNew" : true,
+	"something" : "",
+	"isNew" : false,
 	"level" : 0,
-	"life" : 1,
+	"life" : 2,
 	"diamond" : 0,
 	"speedUp" : false,
 	"flash" : false,
