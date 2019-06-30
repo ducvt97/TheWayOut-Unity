@@ -6712,6 +6712,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20087440fb90e041beca4a3ffbdac0b, type: 3}
+--- !u!114 &202246331 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 501539404305678411, guid: c20087440fb90e041beca4a3ffbdac0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 202246330}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76cc3e47bd1ddb49af1b7b0e5a57820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &204700659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69975,6 +69987,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3aaf1587264cd4381124ba41391dac, type: 3}
+--- !u!114 &1742708755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2081382883493938284, guid: 7d3aaf1587264cd4381124ba41391dac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742708754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76cc3e47bd1ddb49af1b7b0e5a57820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750139641
 GameObject:
   m_ObjectHideFlags: 0
@@ -80822,9 +80846,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8055739784854753793, guid: ba3f9612ff1e6ca47a8279e415a029a6,
         type: 3}
+      propertyPath: monsters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055739784854753793, guid: ba3f9612ff1e6ca47a8279e415a029a6,
+        type: 3}
       propertyPath: ballsTotal
       value: 189
       objectReference: {fileID: 0}
+    - target: {fileID: 8055739784854753793, guid: ba3f9612ff1e6ca47a8279e415a029a6,
+        type: 3}
+      propertyPath: monsters.Array.data[0]
+      value: 
+      objectReference: {fileID: 202246331}
+    - target: {fileID: 8055739784854753793, guid: ba3f9612ff1e6ca47a8279e415a029a6,
+        type: 3}
+      propertyPath: monsters.Array.data[1]
+      value: 
+      objectReference: {fileID: 1742708755}
     - target: {fileID: 8055739785618308820, guid: ba3f9612ff1e6ca47a8279e415a029a6,
         type: 3}
       propertyPath: m_AnchoredPosition.y

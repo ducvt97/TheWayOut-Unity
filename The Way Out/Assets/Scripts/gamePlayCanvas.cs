@@ -10,6 +10,7 @@ public class gamePlayCanvas : MonoBehaviour
     public Monster[] monsters;
     public Text txtBalls;
     public GameObject skill;
+    public GameObject pauseMenu;
     public string ballsString;
     public int ballsTotal = 4;
 
@@ -25,7 +26,14 @@ public class gamePlayCanvas : MonoBehaviour
     {
         updateCanvas();
     }
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
+        }
+    }
     public void updateCanvas()
     {
         ballsString = "Balls " + ballsFound.ToString() + "/" + ballsTotal.ToString();
