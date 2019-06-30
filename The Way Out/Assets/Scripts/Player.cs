@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.name == "eyes")
         {
             other.transform.parent.GetComponent<Monster>().checkSight();
+            other.transform.parent.GetComponent<MonsterFlash>().checkSight();
         }
         else if (other.CompareTag("Ball"))
         {

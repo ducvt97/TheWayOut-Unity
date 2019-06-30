@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     public GameObject winPanel;
     public Transform camPos;
     public float speedHunt = 1.5f;
+    public bool isFlash = false;
 
     private NavMeshAgent nav;
     private AudioSource sound;
@@ -79,6 +80,7 @@ public class Monster : MonoBehaviour
         //Debug.DrawLine(eyes.position, player.transform.position, Color.green);
         if (alive)
         {
+            isFlash = true;
             anim.SetFloat("velocity", nav.velocity.magnitude);
             //Idle//
             if (state == "idle") {
@@ -102,6 +104,11 @@ public class Monster : MonoBehaviour
                 }
 
                 nav.SetDestination(navHit.position);
+                //if(isFlash)
+                //{
+                //    transform.position = transform.position + randomPos;
+                //}
+                transform.position = transform.position + randomPos;
                 state = "walk";
             }
 
