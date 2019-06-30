@@ -1,10 +1,10 @@
 {
 	"something" : "",
 	"isNew" : false,
-	"level" : 0,
+	"level" : 4,
 	"life" : 2,
 	"diamond" : 0,
-	"speedUp" : false,
+	"speedUp" : true,
 	"flash" : false,
 	"graphics" : 2,
 	"music" : -7,

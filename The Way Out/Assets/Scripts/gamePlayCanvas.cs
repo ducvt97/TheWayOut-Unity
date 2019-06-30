@@ -9,6 +9,7 @@ public class gamePlayCanvas : MonoBehaviour
     public static gamePlayCanvas instance;
     public Monster[] monsters;
     public Text txtBalls;
+    public GameObject skill;
     public string ballsString;
     public int ballsTotal = 4;
 
@@ -29,6 +30,9 @@ public class gamePlayCanvas : MonoBehaviour
     {
         ballsString = "Balls " + ballsFound.ToString() + "/" + ballsTotal.ToString();
         txtBalls.text = ballsString;
+        var save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
+        if (save.savedData._savedData.speedUp)
+            skill.SetActive(true);
     }
 
     public void findBall()

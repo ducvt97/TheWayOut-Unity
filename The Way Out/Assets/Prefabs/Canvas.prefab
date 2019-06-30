@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8055739785205790143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158383676589745729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb397d4a156857489b3efb13b665b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8055739784000967113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7,6 +19,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165306779397497783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb397d4a156857489b3efb13b665b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8055739784260591780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165306781330587219}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fb397d4a156857489b3efb13b665b0d, type: 3}
@@ -68,18 +92,6 @@ MonoBehaviour:
   player: {fileID: 0}
   Heart: {fileID: 8055739785224703019}
   deadPanel: {fileID: 5039618152422959159}
---- !u!114 &8055739784260591780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165306781330587219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb397d4a156857489b3efb13b665b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8055739784854753798
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,20 +212,9 @@ MonoBehaviour:
   monsters:
   - {fileID: 0}
   txtBalls: {fileID: 8055739785618308819}
+  skill: {fileID: 8055739786032561493}
   ballsString: 
   ballsTotal: 108
---- !u!114 &8055739785205790143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158383676589745729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb397d4a156857489b3efb13b665b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8055739785224703021
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +498,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9779d46c17a59dc46962bd4cd36777a9, type: 3}
+--- !u!1 &8055739786032561493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5527868481846915120, guid: 9779d46c17a59dc46962bd4cd36777a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2557292246791851365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8055739786032561492 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5527868481846915121, guid: 9779d46c17a59dc46962bd4cd36777a9,
