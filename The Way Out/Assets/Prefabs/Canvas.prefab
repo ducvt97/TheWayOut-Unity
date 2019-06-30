@@ -269,7 +269,7 @@ RectTransform:
   m_GameObject: {fileID: 8055739784040755134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 8055739785224703020}
   m_Father: {fileID: 8055739784854753794}
@@ -277,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -294}
+  m_AnchoredPosition: {x: 0, y: -130}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8055739784040755132
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -460,7 +460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -9.7, y: 155.2}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8055739785224703018
@@ -535,8 +535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 82, y: -21.699951}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 186, y: -157.2}
+  m_SizeDelta: {x: 274.7, y: 59.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8055739785618308818
 CanvasRenderer:
@@ -567,14 +567,14 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 16e74a8c6cc2a084883c106d31f04fba, type: 3}
+    m_Font: {fileID: 12800000, guid: decf57d1b0b809f4eb2d6e3efcc17c45, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_MaxSize: 300
+    m_Alignment: 3
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -980,12 +980,12 @@ PrefabInstance:
     - target: {fileID: 6131564819818642704, guid: 4425a9c4ca61d484abd0586315ec82b8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -90
+      value: -173
       objectReference: {fileID: 0}
     - target: {fileID: 6131564819818642704, guid: 4425a9c4ca61d484abd0586315ec82b8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -89.5
+      value: -173.54
       objectReference: {fileID: 0}
     - target: {fileID: 6131564819818642704, guid: 4425a9c4ca61d484abd0586315ec82b8,
         type: 3}
@@ -1027,6 +1027,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6131564819818642704, guid: 4425a9c4ca61d484abd0586315ec82b8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131564819818642704, guid: 4425a9c4ca61d484abd0586315ec82b8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4425a9c4ca61d484abd0586315ec82b8, type: 3}
 --- !u!224 &8055739785757871573 stripped
@@ -1042,16 +1052,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8055739784854753794}
     m_Modifications:
-    - target: {fileID: 3043288366052113215, guid: 500d8e715a68fa44aad75b59136bca14,
-        type: 3}
-      propertyPath: m_Name
-      value: DeadPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3043288366052113215, guid: 500d8e715a68fa44aad75b59136bca14,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3043288366052113214, guid: 500d8e715a68fa44aad75b59136bca14,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1157,10 +1157,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3043288366052113215, guid: 500d8e715a68fa44aad75b59136bca14,
+        type: 3}
+      propertyPath: m_Name
+      value: DeadPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043288366052113215, guid: 500d8e715a68fa44aad75b59136bca14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9216542904184287408, guid: 500d8e715a68fa44aad75b59136bca14,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9216542904184287408, guid: 500d8e715a68fa44aad75b59136bca14,
         type: 3}
@@ -1192,10 +1202,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9216542904184287408, guid: 500d8e715a68fa44aad75b59136bca14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
     - target: {fileID: 9216542905018789204, guid: 500d8e715a68fa44aad75b59136bca14,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9216542905018789204, guid: 500d8e715a68fa44aad75b59136bca14,
         type: 3}
@@ -1221,6 +1236,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216542905018789204, guid: 500d8e715a68fa44aad75b59136bca14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043288365858658614, guid: 500d8e715a68fa44aad75b59136bca14,
+        type: 3}
+      propertyPath: m_Text
+      value: You are Dead. Retry ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369888424343609320, guid: 500d8e715a68fa44aad75b59136bca14,
+        type: 3}
+      propertyPath: sceneName
+      value: StageSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 500d8e715a68fa44aad75b59136bca14, type: 3}
@@ -1255,16 +1285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8055739784854753794}
     m_Modifications:
-    - target: {fileID: 4045745323113863235, guid: 5da307d8b240de247acd03e2558879f7,
-        type: 3}
-      propertyPath: m_Name
-      value: WinPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4045745323113863235, guid: 5da307d8b240de247acd03e2558879f7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4045745323113863234, guid: 5da307d8b240de247acd03e2558879f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1369,6 +1389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045745323113863235, guid: 5da307d8b240de247acd03e2558879f7,
+        type: 3}
+      propertyPath: m_Name
+      value: WinPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045745323113863235, guid: 5da307d8b240de247acd03e2558879f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924380112143127500, guid: 5da307d8b240de247acd03e2558879f7,
         type: 3}

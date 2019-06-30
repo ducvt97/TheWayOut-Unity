@@ -688,6 +688,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25f8316189c5086469958469a65287ca, type: 3}
+--- !u!1 &1179754255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4854599124601295987, guid: baa256eae199e314ab7c6921dbdb9a20,
+    type: 3}
+  m_PrefabInstance: {fileID: 1622230980174048335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1179754264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179754255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Trigger:
+    m_IsTriggerExpanded: 1
+    m_Type: 0
+    m_LifecycleEvent: 1
+    m_ApplyRules: 0
+    m_Rules:
+      m_Rules: []
+    m_TriggerBool: 0
+    m_InitTime: 5
+    m_RepeatTime: 5
+    m_Repetitions: 0
+    repetitionCount: 0
+  m_EventPayload:
+    m_IsEventExpanded: 1
+    m_StandardEventType: CustomEvent
+    m_Parameters:
+      m_Parameters: []
+    m_Name: PlayGame
 --- !u!1001 &1328156948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1652,7 +1688,7 @@ PrefabInstance:
     - target: {fileID: 4873093910529533400, guid: 842822c6be05abb4abbb4381a3d900a9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -224
+      value: 736
       objectReference: {fileID: 0}
     - target: {fileID: 4873093910529533400, guid: 842822c6be05abb4abbb4381a3d900a9,
         type: 3}
@@ -1672,7 +1708,7 @@ PrefabInstance:
     - target: {fileID: 4873093910529533400, guid: 842822c6be05abb4abbb4381a3d900a9,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4873093910529533400, guid: 842822c6be05abb4abbb4381a3d900a9,
         type: 3}
@@ -1682,7 +1718,7 @@ PrefabInstance:
     - target: {fileID: 4873093910529533400, guid: 842822c6be05abb4abbb4381a3d900a9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4873093910529533400, guid: 842822c6be05abb4abbb4381a3d900a9,
         type: 3}

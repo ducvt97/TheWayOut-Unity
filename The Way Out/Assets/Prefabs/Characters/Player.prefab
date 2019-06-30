@@ -1059,8 +1059,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alive: 1
   ourHealth: 0
-  maxhealth: 2
-  IconMinimapMonster: {fileID: 0}
+  IconMinimapMonster:
+  - {fileID: 0}
+  monsters: []
+  touchBall: {fileID: 0}
+  Heart1: {fileID: 0}
+  Heart2: {fileID: 0}
 --- !u!1 &512417493286425247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,7 +2986,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 51
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3273,7 +3277,7 @@ PrefabInstance:
     - target: {fileID: 5062258292166595081, guid: 7c9f035362628054ea59dbe03692d298,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 309
+      value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 5062258292166595081, guid: 7c9f035362628054ea59dbe03692d298,
         type: 3}
