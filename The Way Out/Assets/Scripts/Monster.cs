@@ -26,7 +26,7 @@ public class Monster : MonoBehaviour
     private bool alive = true;
     private float wait = 0f;
     private bool highAlert = false;
-    private float alertness = 20f;
+    private float alertness = 10f;
     private Vector3 startPosMonster;
 
     void Awake()
@@ -77,10 +77,9 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.DrawLine(eyes.position, player.transform.position, Color.green);
+        Debug.DrawLine(eyes.position, player.transform.position, Color.green);
         if (alive)
         {
-            isFlash = true;
             anim.SetFloat("velocity", nav.velocity.magnitude);
             //Idle//
             if (state == "idle") {
@@ -95,7 +94,7 @@ public class Monster : MonoBehaviour
                     //each time, lose awareness of player general position//
                     alertness += 5f;
 
-                    if (alertness > 20f)
+                    if (alertness > 10f)
                     {
                         highAlert = false;
                         nav.speed = 1.2f;
@@ -104,11 +103,12 @@ public class Monster : MonoBehaviour
                 }
 
                 nav.SetDestination(navHit.position);
-                //if(isFlash)
-                //{
-                //    transform.position = transform.position + randomPos;
-                //}
-                transform.position = transform.position + randomPos;
+                if (isFlash)
+                {
+                    transform.position = navHit.position;
+                    isFlash = false;
+                    Invoke("flash", 15f);
+                }
                 state = "walk";
             }
 
@@ -238,5 +238,14 @@ public class Monster : MonoBehaviour
         nav.speed = 1.2f;
         alive = true;
         nav.Resume();
+    }
+
+    //flash//
+    public void flash()
+    {
+        //Vector3 flashPos = new Vector3(0, 5, 0);
+
+        //transform.position = transform.position + flashPos;
+        isFlash = true;
     }
 }
