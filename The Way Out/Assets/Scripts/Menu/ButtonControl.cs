@@ -23,6 +23,7 @@ public class ButtonControl : MonoBehaviour
 
     public void LoadScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
 

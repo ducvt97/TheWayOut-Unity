@@ -12,8 +12,8 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         save = GameObject.FindGameObjectWithTag("SavedData").GetComponent<Save>();
-        if (save.savedData._savedData.isNew)
-            transform.GetChild(0).transform.gameObject.SetActive(false);
+        if (!save.savedData._savedData.isNew)
+            transform.GetChild(0).transform.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

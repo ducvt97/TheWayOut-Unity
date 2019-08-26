@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEditor;
 
 [System.Serializable]
 public class Data
@@ -14,16 +15,17 @@ public class Data
     public float music, sfx;
 }
 
-[System.Serializable]
+//[System.Serializable]
 public class SavedData
 {
     public Data _savedData;
 
-    private string savedDataPath = "Assets/SavedData/Saved.json";
-    private string defaultDataPath = "Assets/SavedData/Default.json";
+    private string savedDataPath;
+    private TextAsset savedDataFile;
 
     public SavedData()
     {
+        savedDataPath = Path.Combine(Application.streamingAssetsPath, "Saved.txt");
         _savedData = JsonUtility.FromJson<Data>(ReadDataFile());
     }
 
@@ -35,12 +37,6 @@ public class SavedData
     public void OverwriteDataFile()
     {
         var jsonString = JsonUtility.ToJson(_savedData);
-        File.WriteAllText(savedDataPath, jsonString);
-    }
-
-    public void OverwriteDataFile(Data data)
-    {
-        var jsonString = JsonUtility.ToJson(data);
         File.WriteAllText(savedDataPath, jsonString);
     }
 

@@ -7,6 +7,7 @@ public class Save : MonoBehaviour
 {
     public SavedData savedData;
     public AudioMixer audioMixer;
+    public TextAsset savedDataFile;
 
     void Awake()
     {
